@@ -28,28 +28,10 @@ const x = setInterval(function() {
     }
 }, 1000);
 
-// Quote of the Day
-const quotes = [
-    "Setiap hari adalah kesempatan baru untuk mencintaimu lebih dalam.",
-    "Ulang tahunmu adalah kesempatan bagi aku untuk mengingatkanmu betapa berharganya dirimu.",
-    "Aku bersyukur bisa merayakan momen ini bersamamu, sayang."
-];
-document.getElementById('quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
-
 // Message reveal on button click
 document.getElementById('openMessageBtn').onclick = function() {
     document.getElementById('extraMessage').style.display = 'block';
     this.style.display = 'none';
-};
-
-// Gift box unwrap effect
-document.getElementById('giftBox').onclick = function() {
-    this.innerHTML = "<p>Surprise! 🎉💖</p>";
-    confetti({
-        particleCount: 100,
-        spread: 90,
-        origin: { x: 0.5, y: 0.5 }
-    });
 };
 
 // Interactive Background Animation (Stars)
