@@ -52,6 +52,20 @@ header p {
     animation: slideUp 1s ease-out;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4d6d;
+}
+
 footer {
     margin-top: 30px;
     font-size: 1rem;
@@ -86,4 +100,10 @@ footer {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.quote-of-the-day {
+    font-style: italic;
+    color: #ff4d6d;
+    margin-top: 30px;
 }
