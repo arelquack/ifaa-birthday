@@ -41,3 +41,13 @@ document.getElementById('openMessageBtn').onclick = function() {
     document.getElementById('extraMessage').style.display = 'block';
     this.style.display = 'none';
 };
+
+// Gift box unwrap effect
+document.getElementById('giftBox').onclick = function() {
+    this.innerHTML = "<p>Surprise! 🎉💖</p>";
+    confetti({
+        particleCount: 100,
+        spread: 90,
+        origin: { x: 0.5, y: 0.5 }
+    });
+};

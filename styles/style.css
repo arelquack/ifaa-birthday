@@ -23,7 +23,7 @@ header h1 {
 header p {
     font-size: 1.3rem;
     margin-top: 10px;
-    color: #ff4d6d;
+    color: #000000;
 }
 
 .birthday-img {
@@ -60,10 +60,12 @@ button {
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: #ff4d6d;
+    transform: scale(1.1);
 }
 
 footer {
@@ -71,6 +73,32 @@ footer {
     font-size: 1rem;
     color: #ff4d6d;
     text-transform: uppercase;
+}
+
+#giftBox {
+    width: 200px;
+    height: 200px;
+    background-color: #ff85a2;
+    border-radius: 12px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#giftBox:hover {
+    transform: rotate(10deg);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quote-of-the-day {
+    font-style: italic;
+    color: #ff4d6d;
+    margin-top: 30px;
 }
 
 @keyframes bounce {
@@ -102,8 +130,85 @@ footer {
     }
 }
 
-.quote-of-the-day {
-    font-style: italic;
-    color: #ff4d6d;
-    margin-top: 30px;
+/* Media Queries */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .message {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #giftBox {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .birthday-img {
+        max-width: 80%;
+    }
+
+    .message {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    #giftBox {
+        width: 160px;
+        height: 160px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .birthday-img {
+        max-width: 90%;
+    }
+
+    .message {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.7rem;
+    }
+
+    #giftBox {
+        width: 140px;
+        height: 140px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
