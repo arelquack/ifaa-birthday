@@ -38,11 +38,36 @@ header p {
 .birthday-img {
     max-width: 90%;
     height: auto;
-    border-radius: 20px;
     margin: 40px 0;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     transform: scale(1);
     transition: transform 0.3s ease;
+
+    /* Membuat Love Shape */
+    position: relative;
+    width: 250px; /* Ukuran gambar */
+    height: 250px;
+    background: url('birthday-image.jpg') no-repeat center/cover;
+    clip-path: polygon(
+        50% 15%, 
+        61% 3%, 
+        74% 0%, 
+        87% 5%, 
+        96% 15%, 
+        99% 27%, 
+        96% 41%, 
+        89% 52%, 
+        74% 68%, 
+        50% 100%, 
+        26% 68%, 
+        11% 52%, 
+        4% 41%, 
+        1% 27%, 
+        4% 15%, 
+        13% 5%, 
+        26% 0%, 
+        39% 3%
+    );
 }
 
 .birthday-img:hover {
