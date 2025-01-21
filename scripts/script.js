@@ -51,3 +51,35 @@ document.getElementById('giftBox').onclick = function() {
         origin: { x: 0.5, y: 0.5 }
     });
 };
+
+// Interactive Background Animation (Stars)
+const canvas = document.createElement('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+document.body.appendChild(canvas);
+const ctx = canvas.getContext('2d');
+
+function createStar() {
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height;
+    const radius = Math.random() * 2 + 1;
+    const speed = Math.random() * 0.5 + 0.1;
+    return { x, y, radius, speed };
+}
+
+const stars = Array.from({ length: 100 }, createStar);
+
+function animateStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#fff';
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) star.y = 0;
+    });
+    requestAnimationFrame(animateStars);
+}
+
+animateStars();

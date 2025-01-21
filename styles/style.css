@@ -6,6 +6,15 @@ body {
     overflow-x: hidden;
 }
 
+/* Pastikan canvas berada di belakang semua elemen */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Menempatkan canvas di belakang semua elemen */
+    pointer-events: none; /* Agar tidak mengganggu interaksi dengan elemen lain */
+}
+
 .container {
     text-align: center;
     padding: 40px;
