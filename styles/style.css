@@ -32,7 +32,7 @@ header h1 {
 header p {
     font-size: 1.3rem;
     margin-top: 10px;
-    color: #000000;
+    color: #ffffff;
 }
 
 .birthday-img {
@@ -95,7 +95,7 @@ button#openMessageBtn:hover {
 footer {
     margin-top: 30px;
     font-size: 1rem;
-    color: #ff4d6d;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -117,6 +117,27 @@ footer {
 #giftBox:hover {
     transform: rotate(10deg);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Relationship Counter */
+#relationshipCounter {
+    margin: 40px auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+#relationshipCounter p {
+    margin: 5px 0;
+    font-size: 1.8rem;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#daysCounter {
+    font-size: 3rem;
+    color: #ffffff;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .quote-of-the-day {

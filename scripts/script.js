@@ -65,3 +65,27 @@ function animateStars() {
 }
 
 animateStars();
+
+// Hitung total hari sejak 2 Februari 2023
+const relationshipStartDate = new Date("2023-02-02");
+const today = new Date();
+const totalDays = Math.floor((today - relationshipStartDate) / (1000 * 60 * 60 * 24));
+
+// Animasi counter dari 0 ke totalDays
+let currentCount = 0;
+const daysCounter = document.getElementById("daysCounter");
+
+function animateCounter() {
+    const increment = Math.ceil(totalDays / 100); // Langkah animasi
+    const interval = setInterval(() => {
+        currentCount += increment;
+        if (currentCount >= totalDays) {
+            currentCount = totalDays;
+            clearInterval(interval);
+        }
+        daysCounter.textContent = `${currentCount}+ hari`;
+    }, 30); // Kecepatan animasi
+}
+
+// Jalankan animasi setelah halaman dimuat
+window.onload = animateCounter;
